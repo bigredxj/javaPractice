@@ -33,7 +33,7 @@ public class PrintAbcWaitNotify {
                 }
                 System.out.print("A,");
                 state=2;
-                lock.notifyAll();
+                lock.notifyAll();  //不能用notify()
             }
         }
     }

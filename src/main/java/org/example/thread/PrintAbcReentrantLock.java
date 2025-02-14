@@ -37,7 +37,7 @@ public class PrintAbcReentrantLock {
         }catch (Exception e){
 
         }finally {
-            System.out.println("unlock-A");
+           // System.out.println("unlock-A");
             lock.unlock();
         }
     }
@@ -55,7 +55,7 @@ public class PrintAbcReentrantLock {
         }catch (Exception e){
 
         }finally {
-            System.out.println("unlock-B");
+           // System.out.println("unlock-B");
             lock.unlock();
         }
     }
@@ -74,7 +74,7 @@ public class PrintAbcReentrantLock {
         }catch (Exception e){
 
         }finally {
-            System.out.println("unlock-C");
+            //System.out.println("unlock-C");
             lock.unlock();
         }
     }

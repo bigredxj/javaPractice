@@ -60,8 +60,8 @@ public class JavaFutureDemo {
         Callable<Boolean>hJob = new HotWarterJob();//③
         FutureTask<Boolean>hTask = new FutureTask<>(hJob);//④
         Thread hThread = new Thread(hTask, "** 烧水-Thread");//⑤
-        Callable<Boolean>wJob = new WashJob();//③
-        FutureTask<Boolean>wTask = new FutureTask<>(wJob);//④
+        Callable<Boolean> wJob = new WashJob();//③
+        FutureTask<Boolean> wTask = new FutureTask<>(wJob);//④
         Thread wThread = new Thread(wTask, "$$ 清洗-Thread");//⑤
         hThread.start();
         wThread.start();

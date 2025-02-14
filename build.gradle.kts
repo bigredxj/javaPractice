@@ -13,10 +13,16 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    implementation("org.junit.jupiter:junit-jupiter:5.10.0")
 
     implementation("io.netty:netty-all:4.2.0.RC1")
+
+    implementation("org.slf4j:slf4j-log4j12:2.0.16")
+
+    implementation("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
+    implementation("ch.qos.logback:logback-core:1.5.16")
+    implementation("ch.qos.logback:logback-classic:1.5.16")
 }
 
 tasks.getByName<Test>("test") {
