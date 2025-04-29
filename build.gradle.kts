@@ -1,16 +1,12 @@
 plugins {
     id("java")
+    //id("org.apache.avro:avro-maven-plugin") version "1.12.0"
+   // id("com.github.davidmc24.gradle.plugin.avro") version("0.3.3")
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    maven {
-        url = uri("https://maven.aliyun.com/nexus/content/groups/public/")
-    }
-    mavenCentral()
-}
 
 dependencies {
     implementation("org.junit.jupiter:junit-jupiter:5.10.0")
@@ -21,8 +17,12 @@ dependencies {
 
     implementation("org.projectlombok:lombok:1.18.36")
     annotationProcessor("org.projectlombok:lombok:1.18.36")
-    implementation("ch.qos.logback:logback-core:1.5.16")
-    implementation("ch.qos.logback:logback-classic:1.5.16")
+    implementation("ch.qos.logback:logback-core:1.5.18")
+
+
+    implementation(libs.avro)
+    //implementation("org.apache.avro:avro-maven-plugin:1.12.0")
+
 }
 
 tasks.getByName<Test>("test") {

@@ -1,0 +1,9 @@
+[versions]
+avro_version="1.12.0"
+
+[libraries]
+avro = {group="org.apache.avro",name="avro",version.ref="avro_version"}
+
+[bundles]
+
+[plugins]

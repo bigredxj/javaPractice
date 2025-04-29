@@ -18,6 +18,13 @@ public class MyTest {
     }
 
     @Test
+    public void tes2(){
+        Runnable r = ()->System.out.println("hello");
+        Thread thread = new Thread(r);
+        thread.start();
+    }
+
+    @Test
     public void isAlive(){
         SimpleThread mythread = new SimpleThread();
         System.out.println("begin ==" + mythread.isAlive());

@@ -35,8 +35,8 @@ public class LeakBucketLimiter {
         if (water < 0) {
             water = 0;
         }
-        //若剩余的水量小于等于1，则放行
-        if (water <= 1) {
+        //若剩余的水量小于等于rate，则放行
+        if (water < rate) {
             //更新起始时间，为了下次使用
             lastOutTime = nowTime;
             //增加遗留的水量
